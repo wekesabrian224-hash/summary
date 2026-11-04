@@ -25,3 +25,51 @@ console.log(first.slice(1, 4));         // "uck"
 // first[0] = "l";   // silently does nothing (or errors in strict mode)
 const lowered = "l" + first.slice(1);   // build a new string instead
 console.log(lowered);                   // "lucky"
+
+
+
+const score = 72;
+
+if (score >= 80) {
+  console.log("Distinction");
+} else if (score >= 60) {
+  console.log("Pass");
+} else {
+  console.log("Fail");
+}
+
+// Combining conditions
+const age = 20;
+const hasId = true;
+
+if (age >= 18 && hasId) {
+  console.log("Entry allowed");
+}
+
+// Checking membership
+const role = "admin";
+if (["admin", "editor"].includes(role)) {
+  console.log("Can edit");
+}
+
+// One-line version (ternary)
+const status = age >= 18 ? "adult" : "minor";
+console.log(status);
+
+// Truthy and falsy: these count as false
+// 0, "", null, undefined, NaN (and false itself)
+const name = "";
+if (!name) {
+  console.log("Name is empty");
+}
+
+// switch: useful when comparing one value to many options
+const day = "Tue";
+switch (day) {
+  case "Sat":
+  case "Sun":
+    console.log("Weekend");
+    break;
+  default:
+    console.log("Weekday");
+}
